@@ -1,0 +1,33 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model component {
+  id           Int       @id @default(autoincrement())
+  line_item    line_item @relation(fields: [line_item_id], references: [id])
+  line_item_id Int
+  status       String?   @default("Pending")
+  size         String?
+}
+
+model line_item {
+  id        Int         @id @default(autoincrement())
+  sku       String
+  rush      Boolean?    @default(false)
+  order     order       @relation(fields: [order_id], references: [id])
+  order_id  Int
+  component component?
+}
+
+model order {
+  id           Int         @id @default(autoincrement())
+  order_number Int
+  order_date   DateTime
+  cancelled    Boolean
+  line_item    line_item[]
+}
