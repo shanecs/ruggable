@@ -1,61 +1,46 @@
-<p>
-  <a href="https://7code.ro/" target="blank"><img src="https://avatars.githubusercontent.com/u/41831998" height="100" alt="7Code Logo" /></a>
-</p>
+# Ruggable Back End Technical Challenge
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) + [Prisma](https://github.com/prisma/prisma) + [TypeScript](https://github.com/microsoft/TypeScript) starter repository.
+This is a back-end technical challenge for Ruggable. The goal of the challenge is to create an API endpoint, which returns to the requestor a ordered list of rugs rxjsto be printed.
 
-### Production-ready REST API:
-* Error Handling (Exception Filters)
-* Logging System
-* DB Seeds/Migrations
-* Built-in AuthModule, using JWT. Route Guards
-* Model Events Listener (onCreated, …)
-* Deployable. CI/CD pipeline using Github Actions.
-* Advanced ESLint/TSLint config. (e.g: auto-fix will remove unused imports)
-* Shared services/constants/helpers
-* Middlewares/Interceptors implementation example.
-
-## TO-DO
-* Add [Recap.DEV](https://recap.dev/) integration - Tracing/Monitoring service
-* Add Unit tests.
-* Add Social Media Auth
-* Add documentation for setting the GitHub Secrets for the CI/CD pipeline
-* Add API Throttling - https://docs.nestjs.com/security/rate-limiting
-* ...
+Additional information can be located in the instruction [README](../README.md).
 
 ## Installation
 
 ```bash
-$ npm install
+$ yarn
 ```
 
 ## Running the app
 
 ```bash
-# development
-$ npm run start
+# Development
+$ yarn start
 
-# watch mode
-$ npm run start:dev
+# Watch <ode
+$ yarn start:dev
 
-# production mode
-$ npm run start:prod
+# Debug Mode
+$ yarn start:debug
+
+
+# Production Mode
+$ yarn start:prod
 
 ```
 
 ## Test
 
 ```bash
-# unit tests
-$ npm run test
+# Unit Tests
+$ yarn test
 
-# e2e tests
-$ npm run test:e2e
+# E2E Tests
+$ uarn test:e2e
 
-# test coverage
-$ npm run test:cov
+# Test Coverage
+$ yarn test:cov
 ```
 
 ## Prisma (ORM)
@@ -74,16 +59,6 @@ $ npx prisma generate
 ```
 
 ## Code Style
-Sync your IDE with project eslintrc.js. 
+Sync your IDE with project eslintrc.js.
 
 Check `Run ESLint --fix on save`
-
-## Stay in touch
-
-- Author - [Igor Mardari](https://www.linkedin.com/in/igor-mardari-7code/) | [GarryOne](https://github.com/GarryOne)
-- Website - [7code.ro](https://7code.ro/)
-- Github - [@7codeRO](https://github.com/7codeRO/)
-
-## License
-
-  [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
