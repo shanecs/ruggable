@@ -1,6 +1,6 @@
 import { API_PREFIX } from '../shared/constants/global.constants';
-
 import { Config } from './config.interface';
+
 
 export const GLOBAL_CONFIG: Config = {
   nest: {
@@ -11,9 +11,9 @@ export const GLOBAL_CONFIG: Config = {
   },
   swagger: {
     enabled: true,
-    title: 'Nestjs Prisma Starter',
-    description: 'The nestjs API description',
-    version: '1.5',
+    title: 'Ruggable Coding Challenge | Shane Selig',
+    description: 'An API endpoint to give a sorted print list to the requestor.',
+    version: '1.0',
     path: API_PREFIX,
   },
   security: {

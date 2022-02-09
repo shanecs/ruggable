@@ -10,7 +10,7 @@ export class PrintListController {
   constructor(private printListService: PrintListService) {}
 
   @Get('/next')
-  async getAll(
+  async getNext(
     @Query('roll_length') roll_length: number,
     @Query('include_rush') include_rush: string
   ): Promise<PrintListNextResponseDTO> {
