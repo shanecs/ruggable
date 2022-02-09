@@ -14,3 +14,8 @@ export class PrintListPlanItemDTO {
   sku: string;
   rush: boolean;
 }
+
+export class PrintListDimensionsDTO {
+  width: number;
+  length: number;
+}
