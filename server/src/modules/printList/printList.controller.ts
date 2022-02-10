@@ -3,7 +3,7 @@ import { Controller, Get, Query } from '@nestjs/common';
 import { PrintListService } from './printList.service';
 import { PrintListNextResponseDTO, PrintListPlanItemDTO } from './printList.dto';
 import { getPlan } from './printList.helpers';
-import { UPDATE_COMPONENT_STATUS } from '../../shared/constants/toggles.constants';
+import { UPDATE_COMPONENT_STATUS } from '../../shared/toggles/printList';
 
 @ApiTags('printList')
 @Controller('/printList')
