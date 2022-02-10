@@ -1,7 +1,5 @@
-import { component, line_item, order } from '@prisma/client';
-import { componentFindManyArgs } from 'prisma';
+import { BatchPayload } from 'prisma';
 import { Injectable } from '@nestjs/common';
-import { PrintListPlanItemDTO } from './printList.dto';
 import { PrismaService } from '../prisma/prisma.service';
 
 
@@ -41,5 +39,14 @@ export class PrintListService {
       .map( ({ line_item: { order, ...line_item }, ...component }) => ({ ...order, ...line_item, ...component }) )
       .sort(({ order_date: a }, { order_date: b }) => a.getTime() < b.getTime() ? -1 : a.getTime() > b.getTime() ? 1 : 0)
       .sort(({ rush: a }, { rush: b }) => a && b ? 0 : a && !b ? -1 : 1);
+  }
+
+  async updateComponentStatuses(id: number[], status: string): Promise<BatchPayload> {
+    return await this.prisma.component.updateMany({
+      where: {
+        id: { in: id },
+      },
+      data: { status },
+    });
   }
 }
